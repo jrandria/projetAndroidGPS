@@ -41,9 +41,16 @@ public class MainActivity extends AppCompatActivity {
             case R.id.gpsIP:
                 funcPositionGPS(item);
                 return true;
+            case R.id.mapsID:
+                funcAffichageMaps(item);
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void funcAffichageMaps(MenuItem item) {
+        Intent intentSMS=new Intent(getApplicationContext(),MapActivity.class);
+        startActivity(intentSMS);
     }
 
     public void funcEnvoiSMS(MenuItem item){

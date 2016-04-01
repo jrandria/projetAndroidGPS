@@ -9,6 +9,9 @@
     <item android:id="@+id/gpsIP"
         android:title="GPS"
         />
+    <item android:id="@+id/mapsID"
+        android:title="MAPS"
+        />
 </menu>
 <!--
 android:id="@[+][package:]id/resource_name"

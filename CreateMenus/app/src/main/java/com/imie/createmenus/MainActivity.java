@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
     @Override
@@ -49,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void funcAffichageMaps(MenuItem item) {
-        Intent intentSMS=new Intent(getApplicationContext(),MapActivity.class);
-        startActivity(intentSMS);
+        Intent intentMAPS=new Intent(getApplicationContext(),MapActivity.class);
+        startActivity(intentMAPS);
     }
 
     public void funcEnvoiSMS(MenuItem item){
@@ -63,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
     public void funcCAMERA(MenuItem item){
         //On peut démarrer l'intent de lancement du CAMERA directement
         intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+        this.startActivity(intent);
         iv=(ImageView)findViewById(R.id.imageView);
         //startActivityForResult(intent, 0);
 
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        // TODO Auto-generated method stub
         super.onActivityResult(requestCode, resultCode, data);
 
         Bitmap bp = (Bitmap) data.getExtras().get("data");
